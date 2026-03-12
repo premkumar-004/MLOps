@@ -52,10 +52,4 @@ with mlflow.start_run():
     mlflow.log_artifact('confusion_matrix.png')
     mlflow.log_artifact(__file__)
 
-    # Log tag to MLflow
-    mlflow.set_tags({"Author": "Prem", "model": "RandomForest", "dataset": "Wine"})
-
-    #Log the model to MLflow
-    mlflow.sklearn.log_model(rf, "random_forest_model")
-
     print(f"Accuracy: {accuracy}" )
